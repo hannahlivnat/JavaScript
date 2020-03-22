@@ -1,0 +1,170 @@
+//styles.scss
+@import 'mix';
+@import 'hero';
+@import 'grid';
+
+//Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+//Variables
+$Pacifico: 'Pacifico', monospace;
+$SourceCode: 'Source Code Pro', monospace;
+$font-size: 16px;
+$lightblue:  #d5f5ee;
+$grey: #585a5b;
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 1em 0;
+    font-size: $font-size;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: [first] 10vw [second] auto [third] 10vw;
+    grid-template-rows: [first] 100vh [second] auto [third] auto [fourth] 5vh;
+    row-gap: 1em;
+    justify-items: stretch;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+#quoteSection {
+    grid-row: second;
+    grid-column: first / span fourth;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 5em;
+    @include transition(0.3s ease-in-out);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: $lightblue;
+
+    &:hover {
+        @include transform(scale(1.1));
+    }
+
+    #quote {
+        font-family: $SourceCode;
+        font-size: 1.7em;
+        grid-row: second;
+        grid-column: second;
+    }
+}
+
+#mainInfoSection {
+    grid-row: third;
+    grid-column: first / span fourth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 30px;
+    }
+
+    h2 {
+        font-family: $SourceCode;
+        color: black;
+        letter-spacing: .2em;
+        word-spacing: .2em;
+        font-size: 2em;
+    }
+}
+
+#footer {
+    grid-row: fourth;
+    grid-column: first / span fourth;
+    font-size: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    bottom: 1em;
+    width: 100%;
+
+    input {
+        width: 200px;
+        padding: 12px 30px;
+        color: black;
+        outline: $lightblue;
+        font-family: $SourceCode;
+        font-size: .8em;
+        margin-bottom: .5em;
+
+        &:hover {
+            font-size: .9em;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        border: none;
+        color: black;
+        text-decoration: none;
+        background-color: $lightblue;
+        padding: 12px 25px;
+        margin-left: .4em;
+        margin-bottom: .5em;
+        font-size: .6em;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 3px;
+        border-radius: 2px;
+        text-align: center;
+        position: relative;
+        outline: none; 
+        @include transition(background-color .1s ease);
+        cursor: pointer;
+
+        &::after {
+            @include transition(background-color .2s ease);
+            position: absolute;
+            content: "";
+            height: 4px;
+            bottom: 0;
+            width: 100%;
+            background-color: darken($lightblue, 50%);
+            opacity: .18;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            left: 0;
+        }
+
+        &:focus, &:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        &:hover {
+            background-color: lighten($grey, 5%);
+            &::after {
+                opacity: .22;
+            }
+        }
+
+        &:active {
+            background-color: darken($lightblue, 5%);
+
+            &::after {
+                opacity: .32;
+            }
+        }
+    }
+}
