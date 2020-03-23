@@ -2,6 +2,7 @@
 @import 'mix';
 @import 'hero';
 @import 'grid';
+@import 'nav';
 
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
@@ -13,7 +14,11 @@ $SourceCode: 'Source Code Pro', monospace;
 $font-size: 16px;
 $lightblue:  #d5f5ee;
 $grey: #585a5b;
+$coral: rgb(255,127,80);
 
+* {
+    box-sizing: border-box;
+}
 
 html, body {
     height: 100%;

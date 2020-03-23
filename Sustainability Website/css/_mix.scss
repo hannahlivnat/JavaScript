@@ -6,14 +6,21 @@
     -o-animation: #{$str};
     animation: #{$str};
 }
+
+@mixin bp-desktop {
+    @media screen and (min-width: 801px) {
+        @content;
+    }
+}
+
 @mixin bp-tablet {
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         @content;
     }
 }
 
 @mixin bp-mobile {
-    @media (max-width: 450px) {
+    @media screen and (max-width: 450px) {
         @content;
     }
 }

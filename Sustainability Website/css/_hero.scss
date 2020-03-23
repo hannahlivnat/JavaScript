@@ -1,6 +1,6 @@
 $background-image: '/images/sustainableHeroImage.jpg';
 $SourceCode: 'Source Code Pro', monospace;
-
+$coral: rgb(255,127,80);
 
 #heroImage {
     height: 100vh;
@@ -52,7 +52,7 @@ $SourceCode: 'Source Code Pro', monospace;
             color: ghostwhite;
 
             &:hover {
-                color: coral;
+                color: $coral;
             }
         }
     }
