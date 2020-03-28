@@ -1,0 +1,89 @@
+//mixins (alphabetical list)
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin bp-desktop {
+    @media screen and (min-width: 801px) {
+        @content;
+    }
+}
+
+@mixin bp-tablet {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin bp-mobile {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin  backgroundImage($imgpath, $position: center center, $background-repeat: no-repeat, $background-size: cover, $filter: brightness(100%)){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url($imgpath);
+    background-position: $position; 
+    background-repeat: $background-repeat;
+    background-size: $background-size;
+    filter: $filter;
+}
+  
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name}{
+        @content;
+    }
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+//Placeholder Selectors (alphabetical list) -- can be used with @extend 
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
