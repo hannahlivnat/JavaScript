@@ -1,11 +1,67 @@
 @import 'mix';
-@import 
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+ 
+$teal: #007e69;
+$gray: #585a5b;
+$gold: #ffd800;
+$blackboard: #31343a;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 header {
     width: 100%;
-    height: 30vh;
+    height: 5vh;
+    background-color: $blackboard;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    h1 {
+        font-family: "Nunito Sans", sans-serif;
+        color: white;
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: .2em;
+        padding-top: .3em;
+    }
+}
+
+.main {
+    background-color: $blackboard;
+    background-size: cover;
+    background-position: center;
+    padding: 10% 15% 15% 5%;
+    margin: auto;
+    min-height: 100vh;
+
+    button {
+        display: none;
+    }
+}
+
+.enter-items {
+    padding-bottom: 3em;
+}
+
+.list {
+    background-color: $blackboard;
+    opacity: .5;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: sans-serif;
+    line-height: 1.5;
+    padding: 1rem 2rem;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .modal {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.5);  
+    }
 }

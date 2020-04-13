@@ -1,66 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
-@supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type='checkbox'],
-  input[type='radio'],
-  input[type='text'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-*::-webkit-scrollbar {
-  background-color: #01403d;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #007e69;
-  border: #ffffff 1px solid !important;
-}
-
-body {
-  margin: 0;
   padding: 0;
-  font-size: 16px;
-}
-
-input:focus, select:focus, textarea:focus, button:focus {
-  outline: none;
-}
-
-.input {
-  border: none;
-  color: #ffffff;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.2em;
-}
-
-.input:hover, .input:focus {
-  border-bottom: 2px #ffffff solid !important;
-}
-
-.input::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.input:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.input::-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.input::placeholder {
-  color: #ffffff;
+  margin: 0;
 }
 
 header {
   width: 100%;
+  height: 5vh;
+  background-color: #31343a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,114 +23,49 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: #01403d;
 }
 
 header h1 {
-  color: #ffffff;
-  font-size: 3em;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
   letter-spacing: .2em;
+  padding-top: .3em;
 }
 
-header #input {
-  width: 80vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 1em;
+.main {
+  background-color: #31343a;
+  background-size: cover;
+  background-position: center;
+  padding: 10% 15% 15% 5%;
+  margin: auto;
+  min-height: 100vh;
 }
 
-header #input h2 {
-  color: #ffffff;
-  font-size: 1.5em;
-  letter-spacing: .2em;
-  width: 40%;
-  text-align: right;
-  padding-right: 1em;
-}
-
-header #input #name-input {
-  background-color: #01403d;
-  width: 50%;
-  margin-right: 10%;
-  color: #ffffff;
-  font-size: 1.5em;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: bold;
-}
-
-header #input #name-input:focus {
-  background-color: #02726d;
-}
-
-#main-section {
-  padding-top: 2em;
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: #007e69;
-  height: 100vh;
-}
-
-#main-section #new-todo-label {
-  margin-left: 2.5em;
-  font-size: 1.25em;
-}
-
-#main-section #new-todo {
-  background-color: #007e69;
-  margin-bottom: 3em;
-  margin-left: 1em;
-  font-size: 1.25em;
-}
-
-#main-section #new-todo:focus {
-  background-color: #00b194;
-}
-
-#main-section #generate-todo {
+.main button {
   display: none;
 }
 
-#main-section #to-do-list {
-  padding: .5em 0 .5em .5em;
-  width: 80%;
-  margin: auto;
-  background-color: #01403d;
+.enter-items {
+  padding-bottom: 3em;
 }
 
-#main-section #to-do-list #to-do-list-name {
-  font-size: 1.5em;
+.list {
+  background-color: #31343a;
+  opacity: .5;
+  border-radius: 5px;
   color: #ffffff;
-  background-color: #01403d;
-  font-weight: bold;
-  padding-top: .5em;
+  font-family: sans-serif;
+  line-height: 1.5;
+  padding: 1rem 2rem;
 }
 
-#main-section #to-do-list ul {
-  list-style: none none;
-  position: relative;
-  padding: 0;
-}
-
-#main-section #to-do-list ul li {
-  font-size: 1em;
-  color: #ffffff;
-}
-
-#main-section #to-do-list ul li::before {
-  display: inline-block;
-  content: '';
-  border-radius: 0.375rem;
-  height: 0.75rem;
-  width: 0.75rem;
-  margin-right: 0.5rem;
-  background-color: #ffffff !important;
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .modal {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
 /*# sourceMappingURL=style.css.map */

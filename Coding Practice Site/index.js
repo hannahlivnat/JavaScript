@@ -30,7 +30,7 @@ document.querySelector('#sort-button').addEventListener('click', function() {
     numberArr = bubbleSort(numberArr);
     console.log(numberArr);
     //display array on page
-    let stringArray = numberArr.toString(" ").split(' ');
+    let stringArray = numberArr.toString(" ");
     const paragraph = document.createElement('p');
     paragraph.innerText = stringArray;
     paragraph.setAttribute("class", "sorted-list");
