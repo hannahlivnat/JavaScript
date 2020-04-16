@@ -10,15 +10,15 @@
 <body>
   <header>
       <h1>To Do List</h1>
+      <div class="enter-items">
+        <label for="new-todo">What's on Your List?</label>
+        <input class="new-todo-input" id="new-todo" type="text">
+        <button id="generate-todo">Add</button>
+      </div>
   </header>  
   <div class="main" id="main-section">
-    <div class="enter-items">
-      <label for="new-todo">Add a new item to the list:</label>
-      <input class="new-todo-input" id="new-todo" type="text">
-      <button id="generate-todo">Add</button>
-    </div>
     
-    <div class="list">
+    <div class="list" id ="list">
       <h3>My To Do List</h3>
       <ul class="todos">
       </ul>

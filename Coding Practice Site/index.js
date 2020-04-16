@@ -1,5 +1,4 @@
 //bubble sort function 
-
 let bubbleSort = (inputArr) => {
     let len = inputArr.length;
     let swapped;
@@ -17,14 +16,11 @@ let bubbleSort = (inputArr) => {
     return inputArr;
 };
 
-
+//Show sorted numbers to user
 
 document.querySelector('#sort-button').addEventListener('click', function() {
-    //retrieve value from input
-    let numberList = document.querySelector('#numberInput').value;
-    console.log(numberList);
-    //change value into array
-    let numberArr = numberList.split(',').map(Number);
+    //retrieve numbers from input and change into array
+    let numberArr = document.querySelector('#numberInput').value.split(',').map(Number);
     console.log(numberArr);
     //sort the array
     numberArr = bubbleSort(numberArr);

@@ -4,11 +4,14 @@ const backgroundChangesAccordingToTime = () => {
   let today = new Date();
   let hour = today.getHours();
   const mainSection = document.querySelector('#main-section');
+  const toDoListSection = document.querySelector('#list');
 
   if (hour <= 9) {
     mainSection.style.backgroundImage = "url(images/sunrise_image.jpg)";
   } else if (hour <= 17){
     mainSection.style.backgroundImage = "url(images/daytime_image.jpg)";
+    toDoListSection.style.opacity = .8;
+
   } else if (hour > 17) {
     mainSection.style.backgroundImage = "url(images/night_image.jpg)";
   }
