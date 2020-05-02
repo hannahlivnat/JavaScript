@@ -58,7 +58,7 @@ const addMoney = (tool) => {
             break;
         case 'herdOfHungryGoats':
             moneyEarned += 250;
-            updateMoneyDisplay('After hiring a team of starving student cut the grass for you');
+            updateMoneyDisplay('After hiring a team of hungry goats to cut the grass for you');
             break;
         default: 
             updateMoneyDisplay('After lying back and not cutting any lawns')
