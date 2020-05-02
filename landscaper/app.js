@@ -120,8 +120,7 @@ const revealChoiceSection = () => {
     newToolSelectionDisplay.style.visibility = 'visible';
 }
 
-// help with some concepts from --- https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
-//function to apply event listener to new buttons with class of .choice_button. Is not working after teeth button. 
+//function to apply event listener to new buttons with class of .choice_button. 
 const applyEventListenerToButton = (id) => {
     document.querySelector(`#${id}`).addEventListener('click', function () {
             // const arrayElementName = this.getAttribute('id');
@@ -153,13 +152,10 @@ const closeToolSelectionDiv = () => {
 
 //event listeners and called functions===================================================
 
-//this calls and event listener that triggers add money function with cut lawn with teeth button is clicked
-
+//calls event listener that triggers add money function when cut lawn with teeth button is clicked
 applyEventListenerToButton('teeth');
 
-//this event listener triggers _____ function when buy new item button is clicked
-//I need the item item qualified for to be saved in currentToolAvailableForPurchase
-//I also need to display the yes_and_no_button_section and update the text with the item available.
+//this event listener triggers revealChoiceSectionfunction when buy new item button is clicked
 buyNewItemButton.addEventListener('click', revealChoiceSection);
 
 //this event listener adds new tool to array when yes button is clicked, then hides tool selection div
