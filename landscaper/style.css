@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;900');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+}
+
+h1 {
+    font-family: Monteserrat, sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    text-align: center;
+    color: #6e921d;
+}
+
+h2 {
+    font-family: Monteserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.container {
+    background: url('images/lawn_image.jpg') #6e921d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.game_choices {
+    background: rgba(76, 175, 79, 0.317);
+    width: 80%;
+    margin: auto; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    top: 5vh;
+    position: relative;
+    padding: 5%;
+}
+
+/* button styling ideas from Federico Dossena blog */
+
+button {
+    display: inline-block;
+    padding: 0.5em 3em;
+    border: 0.16em solid #ffffff;
+    background: transparent;
+    margin: 0.3em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.15s;
+    font-family: Monteserrat, sans-serif;
+    color: #ffffff;
+    font-weight: 200; 
+    font-size: .7em;
+    max-width: 100%;
+    width: 15em;
+    word-wrap: break-word;
+    
+
+}
+
+button:hover  {
+    border: .2em dashed;
+    cursor: pointer;
+    background-color: rgba(76, 175, 79, 0.6);
+}
+
+#buyNewItemButton {
+    display: none;
+}
+
+.game_results {
+    background: rgba(76, 175, 79, 0.4);
+    position: relative;
+    top: 10vh;
+    width: 80%;
+    margin: auto; 
+    padding: 5%;
+    color: #ffffff;
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_results > p {
+    font-family: Monteserrat, sans-serif;
+    font-weight: 500; 
+    font-size: 2.5em;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+.new_tool_selection {
+    visibility: hidden;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    transition: all .3s;
+}
+
+.new_tool_selection > p {
+    font-family: Monteserrat, sans-serif;
+    font-weight: 500; 
+    letter-spacing: .1em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.yes_and_no_button_section {
+    text-align: center;
+}
