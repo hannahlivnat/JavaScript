@@ -2,7 +2,7 @@
 
 Landscaping game created using HTML, CSS, and JavaScript as part of General Assembly Software Engineering Immersive Course.
 
-The game loads with the instructions, one button, and an <h2> displaying how much 
+The game loads with the instructions, one button, and an h2 header displaying how much 
 you've currently earned. 
 
 As you cut lawns with first available button, you make $1 per button click. money earned is tracked through variable and updated in the DOM. After moneyEarned < 4, 
