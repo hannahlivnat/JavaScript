@@ -8,73 +8,88 @@ body {
 header {
     box-sizing: border-box;
     width: 95%;
-    margin: auto;
+    margin: auto;    
+}
+
+.visible-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2px 5px;
 }
 
 h1 {
     font-family: Monteserrat, sans-serif;
     font-weight: 900;
-    font-size: 4em;
+    font-size: 2em;
     text-align: center;
     color: #6e921d;
 }
 
+.instructions-button {
+    padding: 3px 5px;
+    font-size: .7em;
+    max-width: 60em;
+    margin: 2em .5em;
+    
+}
+
 h2 {
     font-family: Monteserrat, sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.5em;
     text-align: center;
+    display: none;
 }
 
 .container {
-    background: url('images/lawn_image.jpg') #6e921d;
+    background: url('images/grass.jpg') #6e921d;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 110vh;
     margin: 0;
-    height: 100vh;
 }
 
 .game_choices {
-    background: rgba(76, 175, 79, 0.317);
+    background: rgba(0, 0, 0, 0.4);
     width: 80%;
     margin: auto; 
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: row; 
     top: 5vh;
     position: relative;
     padding: 5%;
 }
 
-/* button styling ideas from Federico Dossena blog */
-
 button {
     display: inline-block;
     padding: 0.5em 3em;
-    border: 0.16em solid #ffffff;
-    background: transparent;
-    margin: 0.3em;
+    background: #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 50px;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     transition: all 0.15s;
     font-family: Monteserrat, sans-serif;
-    color: #ffffff;
+    color: #000000;
     font-weight: 200; 
     font-size: 1em;
     max-width: 100%;
     width: 15em;
     word-wrap: break-word;
-    
-
+    transition: all .3s;
 }
 
 button:hover  {
-    border: .2em dashed;
     cursor: pointer;
-    background-color: rgba(76, 175, 79, 0.6);
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: none;
 }
 
 #buyNewItemButton {
@@ -82,9 +97,9 @@ button:hover  {
 }
 
 .game_results {
-    background: rgba(76, 175, 79, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     position: relative;
-    top: 10vh;
+    top: 20vh;
     width: 80%;
     margin: auto; 
     padding: 5%;

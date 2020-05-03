@@ -28,12 +28,16 @@ const gameChoiceDisplay = document.querySelector('#gameChoiceDisplay');
 const moneyDisplay = document.querySelector('#moneyDisplay');
 const newToolSelectionDisplay = document.querySelector('#newToolSelection');
 const yesAndNoSection = document.querySelector('#yesAndNoSection');
+const instructionSection = document.querySelector('.instructions');
+
 
 const toolForSaleParagraph = document.querySelector('#announceToolAvailable');
 
 const buyNewItemButton = document.getElementById('buyNewItemButton');
 const yesButton = document.getElementById('yesButton');
 const noButton = document.getElementById('noButton');
+const instructionsButton = document.querySelector('.instructions-button');
+
 
 //functions ================================================
 
@@ -175,7 +179,17 @@ noButton.addEventListener('click', function () {
     closeToolSelectionDiv();
 })
 
+//This event listener hides or displays the instructions for the game
 
+instructionsButton.addEventListener('click', function() {
+    if (instructionsButton.innerText === 'VIEW INSTRUCTIONS') {
+        instructionSection.style.display = 'block';
+        instructionsButton.innerText = 'CLOSE INSTRUCTIONS';
+    } else if (instructionsButton.innerText === 'CLOSE INSTRUCTIONS') {
+        instructionSection.style.display = 'none';
+        instructionsButton.innerText = 'VIEW INSTRUCTIONS';
+    }
+})
 
 
 
